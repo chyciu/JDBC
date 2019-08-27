@@ -4,8 +4,7 @@ import java.sql.*;
 
 public class zadanie1 {
 
-    private final static String sqlInsert = "INSERT INTO uzytkownik" +
-            "(`imie`,`nazwisko`)" +
+    private static String sqlInsert = "INSERT INTO uzytkownik ('imie', 'nazwisko`)" +
             "VALUES ('Kazik', 'Deyna')";
 
     private static int maxID () {
@@ -51,11 +50,6 @@ public class zadanie1 {
                 String nazwisko = resultSet1.getString("nazwisko");
                 System.out.println(id + " " + imie + " " + nazwisko);
             }
-
-
-
-
-
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

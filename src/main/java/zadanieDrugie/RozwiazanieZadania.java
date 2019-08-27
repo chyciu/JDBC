@@ -23,11 +23,14 @@ public class RozwiazanieZadania {
         System.out.println("\nTeraz program usuwa książkę po zadanym ID.");
         DAO.deleteById(13);
 
-        System.out.println("\nTeraz program usuwa książkę z ostatnim ID na altualnej liście.");
+        System.out.println("\nTeraz program usuwa książkę z ostatnim ID na aktualnej liście.");
         DAO.deleteByLastId();
 
-        System.out.println("\nTeraz program zmienia tytul ostatniej ksiazki na 'Naklad wyczerpany'");
+        System.out.println("\nTeraz program zmienia tytul ostatniej ksiażki na 'Naklad wyczerpany'.");
         DAO.updateByLastId();
+
+        System.out.println("\nTeraz program wyświetla akualną listę.");
+        DAO.listAllBooks();
 
 
 
