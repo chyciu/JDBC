@@ -64,13 +64,13 @@ public class DAO {
     }
 
     public static void deleteById(int ID) {
-        String updateID = "DELETE FROM ksiazka WHERE id = ?";
+        String deleteID = "DELETE FROM ksiazka WHERE id = ?";
         String url = "jdbc:mysql://localhost:3306/ksiegarnia";
         String user = "sdatest";
         String password = "Start123!";
 
         try (Connection connection = DriverManager.getConnection(url, user, password);
-             PreparedStatement preStmt = connection.prepareStatement(updateID);) {
+             PreparedStatement preStmt = connection.prepareStatement(deleteID);) {
 
             preStmt.setInt(1, ID);
             Integer liczbaUaktualnionychRekordow = preStmt.executeUpdate();
